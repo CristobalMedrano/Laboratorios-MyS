@@ -81,17 +81,15 @@ legend(title_c, 'Location', 'southoutside', 'FontSize', 12);
 
 %% Segunda parte
 
-disp('El formato del polinomio debe ser: [1 0 2] <=> x^2 + 2')
 polynomial =  input('Ingrese un polinomio: ');
 iterations = input('Ingrese la cantidad máxima de iteraciones: ');
-tol = input('Ingrese la tolerancia del error (valores entre 0 y 1): ');
-initial_value = input('Ingrese el valor inicial: ');
+error = input('Ingrese la tolerancia del error (valores entre 0 y 1): ');
+initial_value = input('Ingrese el valor inicial del polinomio: ');
 
-[root, error_obtained, remaining_iterations] = newton_rapshon(polynomial, ...
-                                        iterations, tol, initial_value);
+[x,errorfin,iterfin] = newtonRaphsonRec(poly,iter,error,xini);
 disp('El valor obtenido es:')
-disp(root)
+disp(x)
 disp('El error obtenido es de: ')
-disp(error_obtained)
-disp('La cantidad de iteraciones usadas es: ')
-disp(iterations - remaining_iterations)
+disp(errorfin)
+disp('La cantidad de iteraciones usadas es:')
+disp(iter - iterfin)
