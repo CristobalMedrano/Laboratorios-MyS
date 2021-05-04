@@ -36,8 +36,8 @@ range_c  = c(domain_c);
 % Se crean los gráficos de cada función (a y b)
 figure1 = figure('Name', 'Función a(x)');
 title_a = 'a(x) = 6log_4(5x + 15) - log_2(2x)';
-grid on;
 plot(domain_ab, range_a, 'r*');
+grid on;
 title('Gráfico de a(x)', 'FontSize', 18);
 ylabel('y', 'FontSize', 14);
 xlabel('x', 'FontSize', 14);
@@ -45,8 +45,8 @@ legend(title_a, 'Location', 'southoutside', 'FontSize', 12);
 
 figure2 = figure('Name', 'Función b(x)');
 title_b = 'b(x) = sen(6log_1_0(2x + 9)) + cos(2ln(x + 16))';
-grid on;
 plot(domain_ab, range_b, 'g+');
+grid on;
 title('Gráfico de b(x)', 'FontSize', 18);
 ylabel('y', 'FontSize', 14);
 xlabel('x', 'FontSize', 14);
