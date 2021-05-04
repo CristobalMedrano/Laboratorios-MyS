@@ -79,7 +79,7 @@ ylabel('y', 'FontSize', 14);
 xlabel('x', 'FontSize', 14);
 legend(title_c, 'Location', 'southoutside', 'FontSize', 12);
 
-%% Segunda parte
+%% Segunda parte (Newton Rapshon - recursivo)
 
 disp('El formato del polinomio debe ser: [1 0 2] <=> x^2 + 2')
 polynomial =  input('Ingrese un polinomio: ');
@@ -95,3 +95,11 @@ disp('El error obtenido es de: ')
 disp(error_obtained)
 disp('La cantidad de iteraciones usadas es: ')
 disp(iterations - remaining_iterations)
+
+%% Segunta parte (Desviacion estandar)
+list = input('Ingrese una lista de numeros: ');
+std_value = standard_desviation(list);
+disp('El valor de la desviación estandar es:')
+disp(std_value)
+
+
