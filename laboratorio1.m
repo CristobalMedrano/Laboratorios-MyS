@@ -21,13 +21,13 @@ example_1_iterations = 10;
 example_1_tol = 0.01;
 example_1_initial_value = -3;
 
-example_2_polynomial = [1 -7 8 -3]; 
-example_2_iterations = 1;
+example_2_polynomial = [1 -7 8 -3 5 2 3 10]; 
+example_2_iterations = 5;
 example_2_tol = 0.01;
 example_2_initial_value = 5;
 
-example_3_polynomial = [1 -7 8 -3]; 
-example_3_iterations = 7;
+example_3_polynomial = [1 -7 8 -3 5 2 3 10]; 
+example_3_iterations = 9;
 example_3_tol = 0.01;
 example_3_initial_value = 5;
 
@@ -43,6 +43,8 @@ disp('El error obtenido es de: ')
 disp(error_obtained)
 disp('La cantidad de iteraciones usadas es: ')
 disp(example_2_iterations - remaining_iterations)
+
+
 
 %% Segunta parte (Desviacion estandar)
 example_std_1 = [1 2 3 4 5];
