@@ -1,4 +1,6 @@
-%% Laboratorio 1 
+% Laboratorio 1
+%% Sección 1: Declaración de directorios.
+% Laboratorio 1
 % Felipe Gonzalez C. (19.360.650-4)
 % Cristóbal Medrano A. (19.083.864-1)
 
@@ -12,7 +14,7 @@ format long
 % functions: Carpeta que contiene funciones del laboratorio.
 addpath('./functions')
 
-%% Primera parte
+%% Sección 2: Parte 1 - Gráficos de funciones a, b y c.
 % Funcion que permite obtener el logaritmo de x con base c
 log_base_c = @(x, c) log(x)/log(c);
 
@@ -80,7 +82,7 @@ ylabel('y', 'FontSize', 14);
 xlabel('x', 'FontSize', 14);
 legend(title_c, 'Location', 'southoutside', 'FontSize', 12);
 
-%% Segunda parte (Newton Rapshon - recursivo)
+%% Sección 3: Parte 2a - Newton Rapshon
 example_1_polynomial = [1 2 -1 2]; 
 example_1_iterations = 10;
 example_1_tol = 0.01;
@@ -138,7 +140,7 @@ show_newton_rapshon(example_3_root, ...
                     example_3_iterations, ...
                     'Ejemplo 3')
 
-%% Segunta parte (Desviacion estandar)
+%% Sección 4: Parte 2b - Desviación estandar
 example_std_1 = [1 2 3 4 5];
 example_std_2 = [12 17 40 31 7 22 20 39 11];
 example_std_3 = [24 37 29 33 21 8 44 19 47 36 43 14 1 46 3];    
