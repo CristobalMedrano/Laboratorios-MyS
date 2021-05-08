@@ -21,7 +21,7 @@ function [root, error_obtained, remaining_iterations] = newton_rapshon(...
     error = abs(polyval(polynomial, initial_value));
 
     % Se calcula la derivada del polinomio
-    derivate = polyder(polynomial);
+    dx_poly = polyval(polyder(polynomial), initial_value);
 
     % Caso base
     if (error <= tol || iterations == 0)
@@ -29,7 +29,7 @@ function [root, error_obtained, remaining_iterations] = newton_rapshon(...
         error_obtained = error;
         remaining_iterations = iterations;
     % Caso invalido del algoritmo de newton rapshon
-    elseif (derivate == 0)
+    elseif (dx_poly == 0)
         disp("Error, la derivada es 0.")
         root = initial_value;
         error_obtained = error;
@@ -37,8 +37,8 @@ function [root, error_obtained, remaining_iterations] = newton_rapshon(...
     % Si no
     else
         % Siguiendo la aproximacion de newton rapshon se calcula la nueva raiz.
-        division = polyval(polynomial, initial_value)/polyval(derivate, initial_value);
-        new_root = initial_value - division;
+        poly = polyval(polynomial, initial_value);
+        new_root = initial_value - poly/dx_poly;
         [root, ...
          error_obtained,...
          remaining_iterations] = newton_rapshon(polynomial, ...
