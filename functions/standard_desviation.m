@@ -4,17 +4,12 @@
 
 function std_value = standard_desviation(list)
     len = length(list);
-    i = 1;
     average_value = average(list);
-    sum = 0;
-    while(i <= len)
-        sum = sum + (abs(list(i)-average_value)).^2;
-        i = i + 1;
-    end
+    s = sum((abs(list-average_value)).^2);
     if (len == 0)
         disp("Error: El largo del arreglo es 0")
         std_value = 0;
     else
-        std_value = sqrt(sum/len);
+        std_value = sqrt(s/len);
     end
 end
