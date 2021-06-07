@@ -48,8 +48,12 @@ H4 = 1/(7*s + 10);
 H5 = (8*s + 8)/(s^3 + 2*s^2 + 3*s);
 H6 = (3*s + 2)/(5*s^2 + 7*s + 10);
 
-%se define la función de transferencia según el diagrama
+% Se define la función de transferencia según el diagrama
 H = H1 + H2 + (feedback(H3, 1, +1)*(H4 + H5)*H6);
 
-%se muestra la función de transferencia
+% Se muestra por consola a la función de transferencia
+disp(H);
+
+% Se muestra en um gráfico la respuesta al escalon de la función de 
+% transferencia.
 showResponseTFPlot(H, "Respuesta al escalón de la función de transferencia");
