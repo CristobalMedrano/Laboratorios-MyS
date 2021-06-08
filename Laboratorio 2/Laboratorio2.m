@@ -1,4 +1,3 @@
-% Laboratorio 1
 %% Sección 1: Declaración de directorios.
 % Laboratorio 2
 % Felipe Gonzalez C. (19.360.650-4)
@@ -29,9 +28,9 @@ H4 = feedback(H3, 1);
 
 % Se obtienen los datos de la función de transferencia.
 [ func_1_gain, func_1_stime, func_1_zeros, func_1_poles] = getDataTransferFunction(H1);
-[ func_2_gain, func_2_stime, func_2_zeros, func_2_poles] = getDataTransferFunction(H1);
-[ func_3_gain, func_3_stime, func_3_zeros, func_3_poles] = getDataTransferFunction(H1);
-[ func_4_gain, func_4_stime, func_4_zeros, func_4_poles] = getDataTransferFunction(H1);
+[ func_2_gain, func_2_stime, func_2_zeros, func_2_poles] = getDataTransferFunction(H2);
+[ func_3_gain, func_3_stime, func_3_zeros, func_3_poles] = getDataTransferFunction(H3);
+[ func_4_gain, func_4_stime, func_4_zeros, func_4_poles] = getDataTransferFunction(H4);
 
 %Graficos para funcion de transferencia (TF = Transfer Function)
 showResponseTFPlot(H1, "Respuesta al escalón para lazo abierto F1");
